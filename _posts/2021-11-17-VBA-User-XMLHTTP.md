@@ -106,7 +106,7 @@ Public str_ActShtName As String
 
 Private Sub btn_sendmsg_Click()
     '0- 上下文环境初始
-    msgurl = "http://192.168.6.7:8020/api/wcUser/setSend"
+    msgurl = "http://192.168.X.XX:8020/api/wcUser/setSend"
     str_ActShtName = ActiveSheet.Name
     
     Dim strResponse As String
@@ -316,9 +316,9 @@ End Function
 
 这次开发共用时初步统计：8h（跨了3天）
 
-1-webapi开发修改估计：2h
-2-VBA开发估计：4h
-3-调试和解决问题：2h
+- 1-webapi开发修改估计：2h
+- 2-VBA开发估计：4h
+- 3-调试和解决问题：2h
 
 今天11月18日，又发现一个问题，**发送的消息在苹果手机上显示异常**：
 
