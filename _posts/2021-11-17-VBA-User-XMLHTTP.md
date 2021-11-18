@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用VBA中的XMLHTTP群发企业微信消息"
-categories: Excel VBA
+categories: Other
 tags:  Excel VBA XMLHTTP 企业微信 
 author: Hoeking
 ---
