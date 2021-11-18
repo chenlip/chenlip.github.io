@@ -26,5 +26,5 @@ layout: null
         {% endfor %}
       </item>
     {% endfor %}
-  </channel>
+  </channel> 
 </rss>
