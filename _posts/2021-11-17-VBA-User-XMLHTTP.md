@@ -151,20 +151,21 @@ Private Sub btn_sendmsg_Click()
         ' 发送消息请求
         If CInt(issend) = 1 Then
             msgstr = GenJsonFromKeyVal(arr_keys, arr_vals)
-            ' MsgBox "JSON" & i & "====" & msgstr
+            
             v_msgbody = msgstr
             
             objxml.Open "POST", msgurl, False ' POST方法
             objxml.SetRequestHeader "Content-Type", "application/text; charset=UTF-8"
             objxml.Send v_msgbody
 
+            ' MsgBox "【调试】JSON" & i & "====" & msgstr & "---- /n 是否发送成功====" & strResponse
             strResponse = objxml.responsetext  '获取WEBAPI返回结果
             strHeaders = objxml.GetAllResponseHeaders '获取WEBAPI返回Headers
 
             If strResponse = "发送不成功" Then
                 '本函数直接返回空串并跳出,设置行首个单元格的背景颜色值为红色
                 Worksheets(str_ActShtName).Cells(i, 1).Interior.ColorIndex = 6
-                Exit Sub
+                
             Else
                 Worksheets(str_ActShtName).Cells(i, 1).Interior.ColorIndex = 10
             End If
